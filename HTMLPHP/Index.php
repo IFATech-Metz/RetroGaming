@@ -10,47 +10,16 @@
     <body>
         <header>    
         </header>
-            <table id="liste">
-                        <tr>
-                            <th>
-                                    <?php
+                <?php         $file_handle = fopen("../DONNEES/F1.txt", "r");
 
-                                            $files_content = readfile("../DONNEES/colonne.txt");
-                                            echo $files_content;
+                    while (!feof($file_handle)) {
 
-                                    ?>  
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                                     <?php
+                    $line_of_text = fgets($file_handle);             
+                    echo $line_of_text . "<br>";
 
-                                            $files_content = readfile("../DONNEES/F1.txt");
-                                            echo $files_content;
-                                
-                                    ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                    <?php
-            
-                                            $files_content = readfile("../DONNEES/F2.txt");
-                                            echo $files_content;
-                                            
-                                    ?>
-                                        </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                    <?php
-            
-                                            $files_content = readfile("../DONNEES/F3.txt");
-                                            echo $files_content;
-                                            
-                                    ?>
-                                        </td>
-                        </tr>
-            </table>
+                    }
+
+                    fclose($file_handle); 
+                ?>
     </body>
 </html>
