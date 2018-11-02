@@ -6,39 +6,44 @@
     </head>
     <body>
         <style>
-                header {
-                    text-align: center;
+            nav{
+                text-align: center;
+                background-color: #00000010;
                 }
-                nav     {
-                    text-align: center;
-                    display : flex;
-                    background-color : #000123;
 
+                ul{
+                    background-color: #ff8000;
+                    list-style: none;
+                    display: flex;
+                    flex-direction: row;
                 }
-                ul      {
-                    background-color : #000012;
-                    list-style : none;
-                    display : flex;
-                    flex-direction : row;
 
-                }
-                li a     {
-                    position : relative;
-                    display : block;
-                    padding : 16px;
-                    text-decoration : none;
-                    font-size : 18px;
-                    font-weight : bold;
-                    color : #ffffff;
-                }
-                li a:hover {
+                li a {
+                    position: relative;
+                    display: block;
+                    padding: 16px;
                     text-decoration: none;
-                    color : #ffffff;
-                    background-color : #183b75;
-                }
-                li ul {
-                    display : none;
-                }
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #ffffff;
+                    }
+
+                    li a:hover {
+                        text-decoration: none;
+                        color: #ffffff;
+                        background-color: #183b75;
+
+                    }
+
+                    li ul {
+                        display: none;
+                    }
+                    li :hover ul {
+                        position: absolute;
+                        display: block;
+                        padding-left: 0;
+                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+                    }
 
         </style>
 
