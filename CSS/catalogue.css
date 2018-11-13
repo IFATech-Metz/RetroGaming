@@ -38,3 +38,15 @@ span
 {
     color:red
 }
+
+/* style du tableau */
+.tableau
+{
+	border: 5px solid black;
+	background-color: grey;
+}
+.tableau td
+{
+	border: 1px solid black;
+	margin: 0px;
+}

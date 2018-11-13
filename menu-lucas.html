@@ -7,10 +7,11 @@
     <title>Page Title</title>
 </head>
 <body>
+    <?php include("header-lucas.html"); ?>
 
-
-<table>
+<table class="tableau">
 <?php
+
 $nbFichiers = 0;
 
 
