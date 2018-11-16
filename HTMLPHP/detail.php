@@ -1,15 +1,3 @@
-<?php
-
-    if(isset($_GET['tata'])) {
-        $mavar = $_GET['tata'];
-        
-        echo "id existe : " . $mavar; 
-        $mavar = $mavar + 0;
-        echo "je modifie : " . $mavar;
-    }
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,29 +12,30 @@
 </header>
 <table class="tableau">
 <?php
-
-for($i=0; $i<=1; $i++)
+$id = $_GET['id'];
+for($i=0; $i<=$id; $i+=$id)
 {
-    // $file_handle = fopen("../DONNEES/F" . $i . ".txt", "r");
+     $file_handle = fopen("../DONNEES/F" . $i . ".txt", "r");
 
-    // while (!feof($file_handle))
-    // {
-    // $line_of_text = fgets($file_handle);
-    // $gamedetail = explode("#", $line_of_text);
-    // echo"<tr>";
-    //     if($gamedetail[5]==1)
-    //     {    
-    //         for($j=0; $j<(count($gamedetail)-2); $j++)
-    //         {
-    //             echo"<td>" . $gamedetail[$j] . "</td>";
-    //         }
-    //     }
+     while (!feof($file_handle))
+     {
+        $line_of_text = fgets($file_handle);
+        $gamedetail = explode("#", $line_of_text);
+        echo"<tr>";
+            if($gamedetail[5]==1)
+            {    
+                for($j=0; $j<(count($gamedetail)-1); $j++)
+                {
+                    if($j!=5)
+                    {
+                        echo"<td>" . $gamedetail[$j] . "</td>";
+                    }
+                }
+            }
+        echo"</tr>";
+     }
 
-    // echo"</tr>";
-    // }
-
-    // fclose($file_handle);
-    echo "i : " . $i;
+    fclose($file_handle);
 }
 ?>
 </table>
@@ -62,11 +51,12 @@ for($i=0; $i<=1; $i++)
 if(isset($_POST['Supprimer']))
 {
     echo "<form method='post' action='detail.php?id=".$id."' enctype=\"multipart/form-data\">
-    <input id='Supprimer' type='submit' name='Supprimerverif' value='Supprimer'/>
+    <input id='Supprimer' type='submit' name='Supprimerverif' value='Etes vous sur de bien vouloir supprimer'/>
 </form>";
     if(isset($_POST['Supprimerverif']))
     {
-                $file_handle = fopen("../DONNEES/F" . $id . ".txt", "r");           // inclure du php dans du js ou inversement ?
+        echo 'toto';
+                $file_handle = fopen("../DONNEES/F" . $id . ".txt", "r");           
                 $line_of_text = fgets($file_handle);
                 $new_text = str_replace('#1#','#0#',$line_of_text);
                 fclose($file_handle);   
@@ -74,16 +64,8 @@ if(isset($_POST['Supprimer']))
                 $file_handle2 = fopen("../DONNEES/F" . $id . ".txt", "w+");
                 fwrite($file_handle2,$new_text);
                 fclose($file_handle2);
-
     }			
-    echo 'alert("Supression effectuer")                                        
-			}
-			else
-			{ 
-				alert("Suppression annulée");                                           
-            }
-        }
-    </script>';
+
 }
 
 ?>
