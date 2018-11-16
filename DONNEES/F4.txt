@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 3#Spyro#<img src="../IMAGES/spyro.jpg">#23 Octobre 1998#Spyro The Dragon est un jeu de plates-formes sur Playstation. L'ignoble sorcier Gnasty Gnorc veut conquÃ©rir le monde. Pour cela, il a mis hors d'Ã©tat de nuire tous les dragons en les statufiant dans du cristal. Vous incarnez Spyro, un tout jeune dragon qui a Ã©chappÃ© Ã  la malÃ©diction de Gnorc. Vous avez donc en charge de libÃ©rer tous les dragons qui ont Ã©tÃ© victimes du tyran et de retrouver tous les joyaux dÃ©robÃ©s.
 =======
 4#Spyro#<img src="../IMAGES/spyro.jpg">#23/10/1998#Spyro The Dragon est un jeu de plates-formes sur Playstation. L'ignoble sorcier Gnasty Gnorc veut conquérir le monde. Pour cela, il a mis hors d'état de nuire tous les dragons en les statufiant dans du cristal. Vous incarnez Spyro, un tout jeune dragon qui a échappé à la malédiction de Gnorc. Vous avez donc en charge de libérer tous les dragons qui ont été victimes du tyran et de retrouver tous les joyaux dérobés.
@@ -7,3 +8,6 @@
 =======
 4#Spyro#<img src="../IMAGES/spyro.jpg">#23/10/1998#Spyro The Dragon est un jeu de plates-formes sur Playstation. L'ignoble sorcier Gnasty Gnorc veut conquérir le monde. Pour cela, il a mis hors d'état de nuire tous les dragons en les statufiant dans du cristal. Vous incarnez Spyro, un tout jeune dragon qui a échappé à la malédiction de Gnorc. Vous avez donc en charge de libérer tous les dragons qui ont été victimes du tyran et de retrouver tous les joyaux dérobés.
 >>>>>>> amelie
+=======
+4#Spyro#<img src="../IMAGES/spyro.jpg">#23/10/1998#Spyro The Dragon est un jeu de plates-formes sur Playstation. L'ignoble sorcier Gnasty Gnorc veut conquÃ©rir le monde. Pour cela, il a mis hors d'Ã©tat de nuire tous les dragons en les statufiant dans du cristal. Vous incarnez Spyro, un tout jeune dragon qui a Ã©chappÃ© Ã  la malÃ©diction de Gnorc. Vous avez donc en charge de libÃ©rer tous les dragons qui ont Ã©tÃ© victimes du tyran et de retrouver tous les joyaux dÃ©robÃ©s.
+>>>>>>> 0e09781dca845d1b517f50641acf806f20dcb10f
