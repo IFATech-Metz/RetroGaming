@@ -51,7 +51,7 @@ $file_handle = fopen("../DONNEES/F".$i.".txt", "r");
     echo"<tr>";
         if($gamedetail[5]==1)
         {    
-            for($j=0; $j<(count($gamedetail)-2); $j++)
+            for($j=0; $j<(count($gamedetail)-3); $j++)
             {
                 echo"<td><a href='detail.php?id=" . $gamedetail[0] . "'>" . $gamedetail[$j] . "</a></td>";
             }

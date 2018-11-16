@@ -45,7 +45,7 @@ $file_handle = fopen("../DONNEES/F".$i.".txt", "r");
     $line_of_text = fgets($file_handle);
     $gamedetail = explode("#", $line_of_text);
     echo"<tr>";
-        if($gamedetail[7]=="sn")
+        if($gamedetail[7]=="play")
         {    
             for($j=0; $j<(count($gamedetail)-3); $j++)
             {
@@ -63,4 +63,3 @@ $file_handle = fopen("../DONNEES/F".$i.".txt", "r");
 
 </body>
 </html>
-
