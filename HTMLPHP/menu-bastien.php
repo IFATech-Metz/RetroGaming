@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" type="text/css" href="../CSS/catalogue.css">
-    <title>Page Title</title>
+    <title>Catalogue RetroGaming</title>
 </head>
 <body>
     <?php include("header-lucas.html"); ?>
