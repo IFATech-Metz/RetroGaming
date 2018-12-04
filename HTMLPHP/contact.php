@@ -3,20 +3,14 @@ include("header-lucas.html");
 $destinataire='barthel.amelie@stagiairesifa.fr';  
 ?><!DOCTYPE html>  
 <html lang="fr">  
-<head>  
-  <title>Contact</title>  
-  <style type="text/css">  
-    form#contact{border:2px solid orange;width:70%;padding:1em}  
-    p#msg,p#adr,p#obj{border:2px solid black;margin-right:10%;padding:10px}  
-    p#msg textarea{border:2px solid blue;height:30em;width:80%}  
-    p#adr input,p#obj input{border:2px solid blue}  
-    p.bt{text-align:center}  
-    p.bt input{border:1px red solid;width:50%}  
-  </style>  
-  <meta http-equiv="content-type" content="Content-type:text/html;charset=iso-8859-1">  
-</head>  
-<body style="direction: ltr;">  
-<h1>Contact</h1>  
+  <head>  
+    <title>Contact</title>  
+      <meta http-equiv="content-type" content="Content-type:text/html;charset=iso-8859-1">  
+  </head>  
+
+      <body style="direction: ltr;">  
+        <link rel="stylesheet" href="../CSS/contact.css">
+          <h1>Contact</h1>  
 <?php  
 $Previsualiser='<p class="bt">  
 <input type="submit" name="previsualiser" tabindex="3" value="Prévisualiser"></p>';  
