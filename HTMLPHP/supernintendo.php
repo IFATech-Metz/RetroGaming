@@ -7,9 +7,7 @@
     <title>Catalogue RetroGaming</title>
 </head>
 <body>
-    <header>
     <?php include("header-lucas.html"); ?>
-    </header>
 
 <table class="tableau">
 <?php
@@ -33,13 +31,11 @@ function nb_element($repertoire)
             }
         }
     return $nbFichiers;
-}
-
-$id = nb_element($repertoire);
-
+    }
+        $id= nb_element($repertoire);
 //fopen("DONNEES/F".nb_element($repertoire, $nbFichiers).".txt", "w");
 
-for($i=0; $i<$id; $i++)
+for($i=1; $i<$id; $i++)
 {
 $file_handle = fopen("../DONNEES/F".$i.".txt", "r");
 
@@ -49,7 +45,7 @@ $file_handle = fopen("../DONNEES/F".$i.".txt", "r");
     $line_of_text = fgets($file_handle);
     $gamedetail = explode("#", $line_of_text);
     echo"<tr>";
-        if($gamedetail[5]==1)
+        if($gamedetail[7]=="sn")
         {    
             for($j=0; $j<(count($gamedetail)-3); $j++)
             {
@@ -62,10 +58,9 @@ $file_handle = fopen("../DONNEES/F".$i.".txt", "r");
 
     fclose($file_handle);
 }
-
 ?>
-
 </table>
 
 </body>
 </html>
+
