@@ -45,9 +45,6 @@ $file_handle = fopen("../DONNEES/F".$i.".txt", "r");
     $line_of_text = fgets($file_handle);
     $gamedetail = explode("#", $line_of_text);
     echo"<tr>";
-<<<<<<< HEAD
-        if($gamedetail[7]=="n64")
-=======
         if($gamedetail[1]=="Titre")
         {    
             for($j=0; $j<(count($gamedetail)-3); $j++)
@@ -56,7 +53,6 @@ $file_handle = fopen("../DONNEES/F".$i.".txt", "r");
             }
         }
         if($gamedetail[7]=="nint")
->>>>>>> a7645d98f95de7a3e844d430c2828f12294b46a8
         {    
             for($j=0; $j<(count($gamedetail)-3); $j++)
             {
