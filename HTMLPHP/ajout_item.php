@@ -37,14 +37,23 @@ function nb_element($repertoire)
 
 <span>Pour ajouter un jeu remplissez ce formulaire: </span><br><br>
 <form method='post' action='ajout_item.php' enctype="multipart/form-data">
-   <!-- <input type='text' name='ID' value='0'/> -->  <!-- A faire AUTOMATIQUEMENT !!!!! -->
     <span>Saisissez le titre du jeu: </span><input type='text' name='titre' value='Titre'/><br>
     <span>Indiquez la date de sortie: </span><input type='date' name='date' value=''/><br>
     <span>Faites une description rapide du jeu: </span><input type='text' name='resume' value='Résumé du jeu' size='100'/><br>
-    <span>Faites une description détaillé du jeu: </span><input type='text' name='description' value='Description' size='100'/><br>
-    <span>Selectionnez une image: </span><input type='file' name='Valider'/><br>
-    <input class='Valider' type='submit' name='sub1'/>
+    <span>Faites une description détaillé du jeu: </span><input class='description' type='text' name='description' value='Description'/><br>
+    <span>Sélectionnez la platforme sur lequelle le jeu est sortie:</span>
+    <select name="Plateforme">
+        <option valeur="play">Playstation 1</option>
+        <option valeur="play2">Playstation 2</option>
+        <option valeur="sn">SuperNitendo</option>
+        <option valeur="n64">Nitendo 64</option>
+        <option valeur="Atari">Atari</option>
+        <option valeur="unknow">Autres</option>
+    </select> <br>
+    <span>Sélectionnez une image en format '.jpg': </span><input type='file' name='Valider'/><br>
+    <input id='Valider' type='submit' name='sub1'/>
 </form>
+
 
 <?php
 
@@ -54,11 +63,16 @@ $destination = "C:/wamp64/www/RetroGaming/IMAGES/".$id.".jpg";
 if(isset($_POST['sub1']))
 {
     move_uploaded_file($_FILES['Valider']['tmp_name'], $destination);
+<<<<<<< HEAD
+    
+    if($_POST['titre']!='' && $_POST['date']!='' && $_POST['description']!='' && $_POST['resume']) // && is_uploaded_file($_FILES['Valider']['tmp_name'])==1) 
+=======
 
     if($_POST['titre']!='' && $_POST['date']!='' && is_uploaded_file($_FILES['image']['tmp_name']==1 && $_POST['description']!='' && $_POST['resume'])
+>>>>>>> a7645d98f95de7a3e844d430c2828f12294b46a8
     {
         $new_item = fopen("../DONNEES/F" . $id . ".txt", "w+");
-        $add_text = $id . '#' . $_POST['titre'] . '#' . '<img src="' . $destination . '"/>#' . $_POST['date'] . '#' . $_POST['resume'] . '#1#' . $_POST['description'];
+        $add_text = $id . '#' . $_POST['titre'] . '#' . '<img src="' . $destination . '"/>#' . $_POST['date'] . '#' . $_POST['resume'] . '#1#' . $_POST['description'] . '#' . $_POST['Plateforme'];
         fwrite($new_item, $add_text);
         fclose($new_item);
         echo '<p id="ajout_item">Votre ajout de jeu rétro a bien été pris en compte ! Merci de votre contribution au site :).</p>';
@@ -69,9 +83,6 @@ if(isset($_POST['sub1']))
     }
 
 }
-
-
-
 
 ?>
 
