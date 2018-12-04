@@ -35,7 +35,7 @@ function nb_element($repertoire)
         $id= nb_element($repertoire);
 //fopen("DONNEES/F".nb_element($repertoire, $nbFichiers).".txt", "w");
 
-for($i=1; $i<$id; $i++)
+for($i=0; $i<$id; $i++)
 {
 $file_handle = fopen("../DONNEES/F".$i.".txt", "r");
 
@@ -45,6 +45,13 @@ $file_handle = fopen("../DONNEES/F".$i.".txt", "r");
     $line_of_text = fgets($file_handle);
     $gamedetail = explode("#", $line_of_text);
     echo"<tr>";
+        if($gamedetail[1]=="Titre")
+        {    
+            for($j=0; $j<(count($gamedetail)-3); $j++)
+            {
+                echo"<td><a href='detail.php?id=" . $gamedetail[0] . "'>" . $gamedetail[$j] . "</a></td>";
+            }
+        }
         if($gamedetail[7]=="sn")
         {    
             for($j=0; $j<(count($gamedetail)-3); $j++)
