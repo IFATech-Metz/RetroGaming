@@ -2,8 +2,8 @@
 
     if(isset($_GET['tata'])) {
         $mavar = $_GET['tata'];
-        
-        echo "id existe : " . $mavar; 
+
+        echo "id existe : " . $mavar;
         $mavar = $mavar + 0;
         echo "je modifie : " . $mavar;
     }
@@ -35,7 +35,7 @@ for($i=0; $i<=1; $i++)
     // $gamedetail = explode("#", $line_of_text);
     // echo"<tr>";
     //     if($gamedetail[5]==1)
-    //     {    
+    //     {
     //         for($j=0; $j<(count($gamedetail)-2); $j++)
     //         {
     //             echo"<td>" . $gamedetail[$j] . "</td>";
@@ -70,17 +70,17 @@ if(isset($_POST['Supprimer']))
                 $line_of_text = fgets($file_handle);
                 $new_text = str_replace('#1#','#0#',$line_of_text);
                 fclose($file_handle);   
-                
+
                 $file_handle2 = fopen("../DONNEES/F" . $id . ".txt", "w+");
                 fwrite($file_handle2,$new_text);
                 fclose($file_handle2);
 
-    }			
-    echo 'alert("Supression effectuer")                                        
+    }
+    echo 'alert("Supression effectuer")
 			}
 			else
-			{ 
-				alert("Suppression annulée");                                           
+			{
+				alert("Suppression annulée");
             }
         }
     </script>';
