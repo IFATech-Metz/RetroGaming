@@ -64,9 +64,6 @@ if(isset($_POST['sub1']))
 {
     move_uploaded_file($_FILES['Valider']['tmp_name'], $destination);
 
-<<<<<<< HEAD
-    if($_POST['titre']!='' && $_POST['date']!='' && is_uploaded_file($_FILES['image']['tmp_name'])==1 && $_POST['description']!='' && $_POST['resume'])
-=======
     if($_POST['titre']!='' && $_POST['date']!='' && $_POST['description']!='' && $_POST['resume']) // && is_uploaded_file($_FILES['Valider']['tmp_name'])==1) 
     {
         $new_item = fopen("../DONNEES/F" . $id . ".txt", "w+");
