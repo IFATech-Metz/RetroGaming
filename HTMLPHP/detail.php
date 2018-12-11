@@ -99,27 +99,28 @@ if(isset($_POST['Modifier']))
 if(isset($_POST['Supprimer']))
 {                                                                           //FAIRE DES CSS POUR CES BOUTONS
     echo "Etes vous sur de bien vouloir supprimer ce jeu du catalogue ?
-    <form method='post' action='detail.php?id=".$id."' enctype='multipart/form-data'>
+    <form method='get' action='detail.php' enctype='multipart/form-data'>
     <input id='Confirmation_YES' type='submit' name='Yes' value='Oui'/>
     <input id='Confirmation_NO' type='submit' name='No' value='Non'/>
+    <input  type='text' name='id' value='".$id."' hidden/>
     </form>";
-    if(isset($_POST['Yes']))
+}
+    if(isset($_GET['Yes']))
     {
         $file_handle = fopen("../DONNEES/F" . $id . ".txt", "r");
         $line_of_text = fgets($file_handle);
         $new_text = str_replace('#1#','#0#',$line_of_text);
         fclose($file_handle);
-
         $file_handle2 = fopen("../DONNEES/F" . $id . ".txt", "w");
         fwrite($file_handle2,$new_text);
         fclose($file_handle2);
     }
-    if(isset($_POST['No']))
+    if(isset($_GET['No']))
     {
-        echo "<a href='menu-bastien.php'>Revenir à l'écran d'accueil</a>";
+        echo "<a href='detail.php?id=".$id."'>Revenir à la page détail</a>";
 
     }
-}
+
 
 ?>
 </body>
