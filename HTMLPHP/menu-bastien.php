@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-    <?php include("header-lucas.html"); ?>
+    <?php include("header-lucas.php"); ?>
     </header>
 
 <table class="tableau">
