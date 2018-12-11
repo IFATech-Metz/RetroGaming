@@ -7,7 +7,7 @@
     <title>Catalogue RetroGaming</title>
 </head>
 <body>
-    <?php include("header-lucas.html"); ?>
+    <?php include("header-lucas.php"); ?>
 
 <table class="tableau">
 <?php
