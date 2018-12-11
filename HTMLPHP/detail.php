@@ -46,19 +46,16 @@ $id=$_GET['id'];
 </form>
 
 <?php
-echo $id;
 $file_handle = fopen("../DONNEES/F" . $id . ".txt", "r");
 $line_of_text = fgets($file_handle);
 $gamedetail = explode("#", $line_of_text);
-  var_dump($gamedetail);
 
 if(isset($_POST['Modifier']))
 {
-  //echo"tata";
     $file_handle = fopen("../DONNEES/F" . $id . ".txt", "r");
     $line_of_text = fgets($file_handle);
     $gamedetail = explode("#", $line_of_text);
-      var_dump($gamedetail);
+
     echo"<form method='post' action='detail.php?id=".$id."' enctype='multipart/form-data'>
             <span>Saisissez le titre du jeu: </span><input type='text' name='titre' value='" . $gamedetail[1] . "'/><br>
             <span>Indiquez la date de sortie: </span><input type='date' name='date' value='" . $gamedetail[3] . "'/><br>
@@ -78,7 +75,6 @@ if(isset($_POST['Modifier']))
 
     if(isset($POST['sub2']))
     {
-      echo "toto";
         $gamedetail[1] = $_POST['titre'];
         $gamedetail[3] = $_POST['date'];
         $gamedetail[4] = $_POST['resume'];
