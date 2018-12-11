@@ -34,37 +34,37 @@ function nb_element($repertoire)
     }
         $id= nb_element($repertoire);
 //fopen("DONNEES/F".nb_element($repertoire, $nbFichiers).".txt", "w");
+$file_handle = fopen("../DONNEES/F0.txt", "r");
 
-for($i=0; $i<$id; $i++)
+$line_of_text = fgets($file_handle);
+$gamedetail = explode("#", $line_of_text);
+echo"<tr>";
+for($j=0; $j<(count($gamedetail)-4); $j++)
+    {
+        echo"<td><a href='detail.php?id=" . $gamedetail[0] . "'>" . $gamedetail[$j] . "</a></td>";
+    }
+
+for($i=1; $i<$id; $i++)
 {
 $file_handle = fopen("../DONNEES/F".$i.".txt", "r");
 
-    while (!feof($file_handle))
+$line_of_text = fgets($file_handle);
+$gamedetail = explode("#", $line_of_text);
+
+if($gamedetail[7]=="play")
+{
+    for($j=0; $j<(count($gamedetail)-4); $j++)
     {
-
-    $line_of_text = fgets($file_handle);
-    $gamedetail = explode("#", $line_of_text);
-    echo"<tr>";
-        if($gamedetail[1]=="Titre")
-        {    
-            for($j=0; $j<(count($gamedetail)-3); $j++)
-            {
-                echo"<td><a href='detail.php?id=" . $gamedetail[0] . "'>" . $gamedetail[$j] . "</a></td>";
-            }
-        }
-        if($gamedetail[7]=="play")
-        {    
-            for($j=0; $j<(count($gamedetail)-3); $j++)
-            {
-                echo"<td><a href='detail.php?id=" . $gamedetail[0] . "'>" . $gamedetail[$j] . "</a></td>";
-            }
-        }
-
-    echo"</tr>";
+        echo"<td><a href='detail.php?id=" . $gamedetail[0] . "'>" . $gamedetail[$j] . "</a></td>";
     }
-
-    fclose($file_handle);
 }
+
+echo"</tr>";
+}
+
+fclose($file_handle);
+
+
 ?>
 </table>
 

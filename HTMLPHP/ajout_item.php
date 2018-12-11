@@ -43,12 +43,12 @@ function nb_element($repertoire)
     <span>Faites une description détaillé du jeu: </span><input class='description' type='text' name='description' value='Description'/><br>
     <span>Sélectionnez la platforme sur lequelle le jeu est sortie:</span>
     <select name="Plateforme">
-        <option valeur="play">Playstation 1</option>
-        <option valeur="play2">Playstation 2</option>
-        <option valeur="sn">SuperNitendo</option>
-        <option valeur="n64">Nitendo 64</option>
-        <option valeur="Atari">Atari</option>
-        <option valeur="unknow">Autres</option>
+        <option value="play"><label>Playstation 1</label></option>
+        <option value="play2"><label>Playstation 2</label></option>
+        <option value="sn"><label>SuperNitendo</label></option>
+        <option value="nint"><label>Nitendo 64</label></option>
+        <option value="Atari"><label>Atari</label></option>
+        <option value="unknow"><label>Autres</label></option>
     </select> <br>
     <span>Sélectionnez une image en format '.jpg': </span><input type='file' name='Valider'/><br>
     <input id='Valider' type='submit' name='sub1'/>
@@ -64,10 +64,10 @@ if(isset($_POST['sub1']))
 {
     move_uploaded_file($_FILES['Valider']['tmp_name'], $destination);
 
-    if($_POST['titre']!='' && $_POST['date']!='' && $_POST['description']!='' && $_POST['resume']) // && is_uploaded_file($_FILES['Valider']['tmp_name'])==1) 
+    if($_POST['titre']!='' && $_POST['date']!='' && $_POST['description']!='' && $_POST['resume']) // && is_uploaded_file($_FILES['Valider']['tmp_name'])==1)
     {
-        $new_item = fopen("../DONNEES/F" . $id . ".txt", "w+");
-        $add_text = $id . '#' . $_POST['titre'] . '#' . '<img src="' . $destination . '"/>#' . $_POST['date'] . '#' . $_POST['resume'] . '#1#' . $_POST['description'] . '#' . $_POST['Plateforme'];
+        $new_item = fopen("../DONNEES/F" . $id . ".txt", "a");
+        $add_text = $id . '#' . $_POST['titre'] . '#' . '<img src="' . $destination . '"/>#' . $_POST['date'] . '#' . $_POST['resume'] . '#1#' . $_POST['description'] . '#' . $_POST['Plateforme'] . "#";
         fwrite($new_item, $add_text);
         fclose($new_item);
         echo '<p id="ajout_item">Votre ajout de jeu rétro a bien été pris en compte ! Merci de votre contribution au site :).</p>';
