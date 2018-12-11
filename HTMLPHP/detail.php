@@ -20,9 +20,9 @@ $id=$_GET['id'];
     $gamedetail = explode("#", $line_of_text);
 
     echo"<tr>";
-        if($gamedetail[5]==1)
+        if($gamedetail[5]=='1')
         {
-            for($j=0; $j<(count($gamedetail)-1); $j++)
+            for($j=0; $j<(count($gamedetail)-3); $j++)
             {
                 if($j!=5)
                 {
@@ -37,17 +37,17 @@ $id=$_GET['id'];
 ?>
 </table>
 
-<!-- <form method='post' action='<?php echo "detail.php?id=".$id;?>'>
+<form method='post' action='<?php echo "detail.php?id=".$id;?>'>
     <input id='Modifier' type='submit' name='Modifier' value='Modifier'/>
 </form>
 <br>
 <form method='post' action='<?php echo "detail.php?id=".$id;?>'  enctype="multipart/form-data">
     <input id='Supprimer' type='submit' name='Supprimer' value='Supprimer'/>
-</form> -->
+</form>
 
 <?php
 echo $id;
-$file_handle = fopen("../DONNEES/F" . $id . ".txt", "w+");
+$file_handle = fopen("../DONNEES/F" . $id . ".txt", "r");
 $line_of_text = fgets($file_handle);
 $gamedetail = explode("#", $line_of_text);
   var_dump($gamedetail);
@@ -55,7 +55,7 @@ $gamedetail = explode("#", $line_of_text);
 if(isset($_POST['Modifier']))
 {
   //echo"tata";
-    $file_handle = fopen("../DONNEES/F" . $id . ".txt", "w+");
+    $file_handle = fopen("../DONNEES/F" . $id . ".txt", "r");
     $line_of_text = fgets($file_handle);
     $gamedetail = explode("#", $line_of_text);
       var_dump($gamedetail);
@@ -87,7 +87,7 @@ if(isset($_POST['Modifier']))
         fclose($file_handle);
         unlink('../DONNEES/F' . $id . '.txt');
         //création du nouveau contenant les modifs
-        $new_item = fopen("../DONNEES/F" . $id . ".txt", "w+");
+        $new_item = fopen("../DONNEES/F" . $id . ".txt", "w");
         $add_text = $id . '#' . $gamedetail[1] . '#' . $gamedetail[2] . '#' . $gamedetail[3] . '#' . $gamedetail[4] . '#1#' . $gamedetail[6] . '#' . $_POST['Plateforme'] . '#';
         fwrite($new_item, $add_text);
         fclose($new_item);
@@ -114,7 +114,7 @@ if(isset($_POST['Supprimer']))
         $new_text = str_replace('#1#','#0#',$line_of_text);
         fclose($file_handle);
 
-        $file_handle2 = fopen("../DONNEES/F" . $id . ".txt", "w+");
+        $file_handle2 = fopen("../DONNEES/F" . $id . ".txt", "w");
         fwrite($file_handle2,$new_text);
         fclose($file_handle2);
     }
