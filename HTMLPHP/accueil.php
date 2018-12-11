@@ -14,5 +14,3 @@
            <img id="retro" src="../images/retrogaming.jpg" alt="photo accueil"> >
     </body>
 </html>
-
-              
