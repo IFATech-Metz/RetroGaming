@@ -31,7 +31,7 @@
                         </ul>
                     </li>
                     <li><a href="contact.php">Contact</a></li>
-                    <li><a href="notice.html">Notice d'utilisation</a></li>
+                    <li><a href="notice.php">Notice d'utilisation</a></li>
                 </ul>
             </nav>
 
