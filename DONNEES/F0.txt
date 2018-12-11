@@ -1,1 +1,1 @@
-ID#Titre#Image#Date de sortie#Description#1#Descriptif#lol
+ID#TITRE#IMAGE#DATE#RESUME#1#DESCRIPTIF#PLATEFORME#
