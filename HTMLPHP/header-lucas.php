@@ -11,7 +11,7 @@
             </header>
             <nav>
                 <ul>
-                    <li><a href="accueil.php">Accueil</a></li>
+                    <li><a href="index.php">Accueil</a></li>
                     <li>
                         <a href="menu-bastien.php">Catalogue</a>
                         <ul>
@@ -31,6 +31,7 @@
                         </ul>
                     </li>
                     <li><a href="contact.php">Contact</a></li>
+                    <li><a href="notice.html">Notice d'utilisation</a></li>
                 </ul>
             </nav>
 

@@ -1,0 +1,35 @@
+body{
+    background-image: url("../images/fond.jpg");
+}
+
+    background-color: #0000123;
+}
+ul {
+    background-color: #ff8000;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+h1,h2 {
+    color: orange;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+}
+p{
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.auteurs {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bolder;
+    color : orange;
+}
+.fil_rouge {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bolder;
+    color : red;
+}
