@@ -7,7 +7,6 @@
     </head>
     <body>
         <?php include("header-lucas.php"); ?>
-
            <p> Bonjour et bienvenue sur le catalogue RetroGaming, vous allez pouvoir retrouver les jeux de votre enfance! Et même le completer avec vos jeux préfèrés ! <br>
            Have fun ! </p>
 

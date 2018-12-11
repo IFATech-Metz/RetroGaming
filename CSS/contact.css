@@ -1,30 +1,5 @@
-form#contact
+h2
 {
-	border:2px solid orange;width:70%;padding:1em;
-	margin-left: 220px;
-}  
-
-p#msg,p#adr,p#obj
-{
-    border:2px solid black;padding:10px
-}  
-
-p#msg textarea
-{
-	border:2px solid blue;height:30em;width:80%
-}  
-
-p#adr input,p#obj input
-{
-	border:2px solid blue
-}  
-
-p.bt
-{
-	text-align:center
-}  
-
-p.bt input
-{
-	border:1px red solid;width:50%
-} 
+	text-align: center;
+	color: red;
+}
