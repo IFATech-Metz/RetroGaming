@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="../CSS/notice_lucas.css">
         <header>
-            <?php include("header-lucas.html"); ?>
+            <?php include("header-lucas.php");  ?>
         </header>
             <title>Notice catalogue Rétrogaming</title>
             <h1 class=".titre"> Notice d'explication catalogue Rétrogaming </h1>
