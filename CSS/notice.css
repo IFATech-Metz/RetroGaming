@@ -7,19 +7,28 @@ h1,h2 {
     text-align: center;
     text-shadow: 2px 2px 2px black;
 }
+
+h2
+{
+    font-size: 25px;
+}
+
 p{
     text-align: left;
     font-size: 20px;
     font-weight: bold;
-    color: white;
+    color: black;
+    text-shadow: 1px 1px 1px orange;
 }
 .auteurs {
     text-align: left;
     font-weight: bolder;
     color : orange;
+    text-shadow: 1px 1px 1px black;
 }
 .fil_rouge {
     text-align: left;
     font-weight: bolder;
     color : red;
+    text-shadow: 1px 1px 1px black;
 }
