@@ -13,10 +13,9 @@
                 <ul>
                     <li><a href="index.php">Accueil</a></li>
                     <li>
-                        <a href="menu-bastien.php">Catalogue</a>
+                        <a href="menu.php">Catalogue</a>
                         <ul>
                             <li><a href="ajout_item.php">Création</a></li>
-                            <li><a href="supp_item.php">Suppression</a></li>
                         </ul>
                     </li>
                     <li>
