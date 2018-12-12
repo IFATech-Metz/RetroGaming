@@ -8,7 +8,7 @@
 </head>
 <body>
 <header>
-    <?php include("header-lucas.php"); ?>
+    <?php include("header.php"); ?>
 </header>
 <table class="tableau">
 <?php
@@ -22,13 +22,14 @@ $id=$_GET['id'];
     echo"<tr>";
         if($gamedetail[5]=='1')
         {
-            for($j=0; $j<(count($gamedetail)-3); $j++)
+            for($j=0; $j<(count($gamedetail)-5); $j++)
             {
                 if($j!=5)
                 {
                     echo"<td>" . $gamedetail[$j] . "</td>";
                 }
             }
+            echo"<td>" . $gamedetail[6] . "</td>";
         }
     echo"</tr>";
 
