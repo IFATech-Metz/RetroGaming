@@ -14,7 +14,7 @@
     <body>
         <h2>Vous trouverez ici la notice d'explication du fonctionnement de notre catalogue :</h2> <br>
 
-            <p>Ce catalogue à été réalisé grâce à PHP et HTML, permet à l'utilisateur d'ajouter, de modifier et de supprimer
+            <p>Ce catalogue a été réalisé grâce à PHP et HTML, permet à l'utilisateur d'ajouter, de modifier et de supprimer
             des éléments directement depuis le catalogue, sans modifier le code. <br>
             Il à été réalisé dans le cadre de notre <span class="fil_rouge">projet fil rouge</span>
              par <span class="auteurs">Bastien Mantès, Lucas Mantoani et Amélie Barthel.</span><br>
