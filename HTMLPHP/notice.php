@@ -2,9 +2,9 @@
 <html lang="fr" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="../CSS/notice_lucas.css">
+        <link rel="stylesheet" type="text/css" href="../CSS/notice.css">
         <header>
-            <?php include("header-lucas.php");  ?>
+            <?php include("header.php");  ?>
         </header>
             <title>Notice catalogue Rétrogaming</title>
             <h1 class=".titre"> Notice d'explication catalogue Rétrogaming </h1>
@@ -14,7 +14,7 @@
     <body>
         <h2>Vous trouverez ici la notice d'explication du fonctionnement de notre catalogue :</h2> <br>
 
-            <p>Ce catalogue réalisé grâce a PHP et HTML, permet à l'utilisateur d'ajouter, de modifier et de supprimer
+            <p>Ce catalogue a été réalisé grâce à PHP et HTML, permet à l'utilisateur d'ajouter, de modifier et de supprimer
             des éléments directement depuis le catalogue, sans modifier le code. <br>
             Il à été réalisé dans le cadre de notre <span class="fil_rouge">projet fil rouge</span>
              par <span class="auteurs">Bastien Mantès, Lucas Mantoani et Amélie Barthel.</span><br>
