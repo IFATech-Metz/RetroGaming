@@ -66,7 +66,7 @@ if(isset($_POST['sub1']))
 
     if($_POST['titre']!='' && $_POST['date']!='' && $_POST['description']!='' && $_POST['resume']) // && is_uploaded_file($_FILES['Valider']['tmp_name'])==1)
     {
-        $new_item = fopen("../DONNEES/F" . $id . ".txt", "a");
+        $new_item = fopen("DONNEES/F" . $id . ".txt", "a");
         $add_text = $id . '#' . $_POST['titre'] . '#' . '<img src="' . $destination . '"/>#' . $_POST['date'] . '#' . $_POST['resume'] . '#1#' . $_POST['description'] . '#' . $_POST['Plateforme'] . "#";
         fwrite($new_item, $add_text);
         fclose($new_item);
