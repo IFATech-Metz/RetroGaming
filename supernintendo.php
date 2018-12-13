@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" type="text/css" href="../CSS/catalogue.css">
+    <link rel="stylesheet" type="text/css" href="CSS/catalogue.css">
     <title>Catalogue RetroGaming</title>
 </head>
 <body>
@@ -16,7 +16,7 @@ $nbFichiers = 0;
 
 
                                                                                 // Choix du répertoire
-$chemin = '../DONNEES';
+$chemin = 'DONNEES';
                                                                                 // Ouverture du répertoire
 $repertoire = opendir($chemin);
 
@@ -33,7 +33,7 @@ function nb_element($repertoire)
     return $nbFichiers;
     }
         $id= nb_element($repertoire);
-        $file_handle = fopen("../DONNEES/F0.txt", "r");
+        $file_handle = fopen("DONNEES/F0.txt", "r");
 
         $line_of_text = fgets($file_handle);
         $gamedetail = explode("#", $line_of_text);
@@ -46,7 +46,7 @@ function nb_element($repertoire)
 for($i=1; $i<$id; $i++)
 {
     echo "<tr>";
-    $file_handle = fopen("../DONNEES/F".$i.".txt", "r");
+    $file_handle = fopen("DONNEES/F".$i.".txt", "r");
     $line_of_text = fgets($file_handle);
     $gamedetail = explode("#", $line_of_text);
         if($gamedetail[7]=="sn" && $gamedetail[5]==1)

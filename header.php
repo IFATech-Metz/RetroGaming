@@ -5,13 +5,13 @@
         <title></title>
     </head>
     <body>
-        <link rel="stylesheet" href="../CSS/css-header.css">
+        <link rel="stylesheet" href="CSS/css-header.css">
             <header>
                 <h1>Catalogue RetroGaming</h1>
             </header>
             <nav>
                 <ul>
-                    <li><a href="../index.php">Accueil</a></li>
+                    <li><a href="index.php">Accueil</a></li>
                     <li>
                         <a href="menu.php">Catalogue</a>
                         <ul>

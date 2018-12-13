@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" type="text/css" href="../CSS/catalogue.css">
+    <link rel="stylesheet" type="text/css" href="CSS/catalogue.css">
     <title>Page Title</title>
 </head>
 <body>
@@ -16,7 +16,7 @@ $nbFichiers = 0;
 
 
                                                                                 // Choix du répertoire
-$chemin = '../DONNEES';
+$chemin = 'DONNEES';
                                                                                 // Ouverture du répertoire
 $repertoire = opendir($chemin);
 
@@ -58,7 +58,7 @@ function nb_element($repertoire)
 <?php
 
 $id = nb_element($repertoire);
-$destination = "../IMAGES/".$id.".jpg";
+$destination = "IMAGES/".$id.".jpg";
 
 if(isset($_POST['sub1']))
 {

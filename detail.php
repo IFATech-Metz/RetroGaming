@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" type="text/css" href="../CSS/catalogue.css">
+    <link rel="stylesheet" type="text/css" href="CSS/catalogue.css">
     <title>Page Title</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
 <?php
 $id=$_GET['id'];
 
-    $file_handle = fopen("../DONNEES/F".$id.".txt", "r");
+    $file_handle = fopen("DONNEES/F".$id.".txt", "r");
 
     $line_of_text = fgets($file_handle);
     $gamedetail = explode("#", $line_of_text);
@@ -47,13 +47,13 @@ $id=$_GET['id'];
 </form>
 
 <?php
-$file_handle = fopen("../DONNEES/F" . $id . ".txt", "r");
+$file_handle = fopen("DONNEES/F" . $id . ".txt", "r");
 $line_of_text = fgets($file_handle);
 $gamedetail = explode("#", $line_of_text);
 
 if(isset($_POST['Modifier']))
 {
-    $file_handle = fopen("../DONNEES/F" . $id . ".txt", "r");
+    $file_handle = fopen("DONNEES/F" . $id . ".txt", "r");
     $line_of_text = fgets($file_handle);
     $gamedetail = explode("#", $line_of_text);
 

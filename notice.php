@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="../CSS/notice.css">
+        <link rel="stylesheet" type="text/css" href="CSS/notice.css">
         <header>
             <?php include("header.php");  ?>
         </header>
