@@ -82,9 +82,9 @@ if(isset($_POST['Modifier']))
         $gamedetail[6] = $_POST['description'];
         //fermeture et suppression du fichier
         fclose($file_handle);
-        unlink('../DONNEES/F' . $id . '.txt');
+        unlink('DONNEES/F' . $id . '.txt');
         //création du nouveau contenant les modifs
-        $new_item = fopen("../DONNEES/F" . $id . ".txt", "w");
+        $new_item = fopen("DONNEES/F" . $id . ".txt", "w");
         $add_text = $id . '#' . $gamedetail[1] . '#' . $gamedetail[2] . '#' . $gamedetail[3] . '#' . $gamedetail[4] . '#1#' . $gamedetail[6] . '#' . $_POST['Plateforme'] . '#';
         fwrite($new_item, $add_text);
         fclose($new_item);
@@ -108,11 +108,11 @@ if(isset($_POST['Supprimer']))
 }
     if(isset($_GET['Yes']))
     {
-        $file_handle = fopen("../DONNEES/F" . $id . ".txt", "r");
+        $file_handle = fopen("DONNEES/F" . $id . ".txt", "r");
         $line_of_text = fgets($file_handle);
         $new_text = str_replace('#1#','#0#',$line_of_text);
         fclose($file_handle);
-        $file_handle2 = fopen("../DONNEES/F" . $id . ".txt", "w");
+        $file_handle2 = fopen("DONNEES/F" . $id . ".txt", "w");
         fwrite($file_handle2,$new_text);
         fclose($file_handle2);
     }
