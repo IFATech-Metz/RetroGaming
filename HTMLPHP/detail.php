@@ -8,7 +8,7 @@
 </head>
 <body>
 <header>
-    <?php include("header-lucas.html"); ?>
+    <?php include("header.php"); ?>
 </header>
 <table class="tableau">
 <?php
@@ -20,15 +20,16 @@ $id=$_GET['id'];
     $gamedetail = explode("#", $line_of_text);
 
     echo"<tr>";
-        if($gamedetail[5]==1)
+        if($gamedetail[5]=='1')
         {
-            for($j=0; $j<(count($gamedetail)-1); $j++)
+            for($j=0; $j<(count($gamedetail)-5); $j++)
             {
                 if($j!=5)
                 {
                     echo"<td>" . $gamedetail[$j] . "</td>";
                 }
             }
+            echo"<td>" . $gamedetail[6] . "</td>";
         }
     echo"</tr>";
 
@@ -37,28 +38,25 @@ $id=$_GET['id'];
 ?>
 </table>
 
-<!-- <form method='post' action='<?php echo "detail.php?id=".$id;?>'>
+<form method='post' action='<?php echo "detail.php?id=".$id;?>'>
     <input id='Modifier' type='submit' name='Modifier' value='Modifier'/>
 </form>
 <br>
 <form method='post' action='<?php echo "detail.php?id=".$id;?>'  enctype="multipart/form-data">
     <input id='Supprimer' type='submit' name='Supprimer' value='Supprimer'/>
-</form> -->
+</form>
 
 <?php
-echo $id;
-$file_handle = fopen("../DONNEES/F" . $id . ".txt", "w+");
+$file_handle = fopen("../DONNEES/F" . $id . ".txt", "r");
 $line_of_text = fgets($file_handle);
 $gamedetail = explode("#", $line_of_text);
-  var_dump($gamedetail);
 
 if(isset($_POST['Modifier']))
 {
-  //echo"tata";
-    $file_handle = fopen("../DONNEES/F" . $id . ".txt", "w+");
+    $file_handle = fopen("../DONNEES/F" . $id . ".txt", "r");
     $line_of_text = fgets($file_handle);
     $gamedetail = explode("#", $line_of_text);
-      var_dump($gamedetail);
+
     echo"<form method='post' action='detail.php?id=".$id."' enctype='multipart/form-data'>
             <span>Saisissez le titre du jeu: </span><input type='text' name='titre' value='" . $gamedetail[1] . "'/><br>
             <span>Indiquez la date de sortie: </span><input type='date' name='date' value='" . $gamedetail[3] . "'/><br>
@@ -78,7 +76,6 @@ if(isset($_POST['Modifier']))
 
     if(isset($POST['sub2']))
     {
-      echo "toto";
         $gamedetail[1] = $_POST['titre'];
         $gamedetail[3] = $_POST['date'];
         $gamedetail[4] = $_POST['resume'];
@@ -87,7 +84,7 @@ if(isset($_POST['Modifier']))
         fclose($file_handle);
         unlink('../DONNEES/F' . $id . '.txt');
         //création du nouveau contenant les modifs
-        $new_item = fopen("../DONNEES/F" . $id . ".txt", "w+");
+        $new_item = fopen("../DONNEES/F" . $id . ".txt", "w");
         $add_text = $id . '#' . $gamedetail[1] . '#' . $gamedetail[2] . '#' . $gamedetail[3] . '#' . $gamedetail[4] . '#1#' . $gamedetail[6] . '#' . $_POST['Plateforme'] . '#';
         fwrite($new_item, $add_text);
         fclose($new_item);
@@ -103,27 +100,28 @@ if(isset($_POST['Modifier']))
 if(isset($_POST['Supprimer']))
 {                                                                           //FAIRE DES CSS POUR CES BOUTONS
     echo "Etes vous sur de bien vouloir supprimer ce jeu du catalogue ?
-    <form method='post' action='detail.php?id=".$id."' enctype='multipart/form-data'>
+    <form method='get' action='detail.php' enctype='multipart/form-data'>
     <input id='Confirmation_YES' type='submit' name='Yes' value='Oui'/>
     <input id='Confirmation_NO' type='submit' name='No' value='Non'/>
+    <input  type='text' name='id' value='".$id."' hidden/>
     </form>";
-    if(isset($_POST['Yes']))
+}
+    if(isset($_GET['Yes']))
     {
         $file_handle = fopen("../DONNEES/F" . $id . ".txt", "r");
         $line_of_text = fgets($file_handle);
         $new_text = str_replace('#1#','#0#',$line_of_text);
         fclose($file_handle);
-
-        $file_handle2 = fopen("../DONNEES/F" . $id . ".txt", "w+");
+        $file_handle2 = fopen("../DONNEES/F" . $id . ".txt", "w");
         fwrite($file_handle2,$new_text);
         fclose($file_handle2);
     }
-    if(isset($_POST['No']))
+    if(isset($_GET['No']))
     {
-        echo "<a href='menu-bastien.php'>Revenir à l'écran d'accueil</a>";
+        echo "<a href='detail.php?id=".$id."'>Revenir à la page détail</a>";
 
     }
-}
+
 
 ?>
 </body>
