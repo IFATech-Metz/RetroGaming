@@ -20,7 +20,7 @@ $id=$_GET['id'];
     $gamedetail = explode("#", $line_of_text);
 
     echo"<tr>";
-        if($gamedetail[5]=='1')
+        if($gamedetail[5]==1)
         {
             for($j=0; $j<(count($gamedetail)-5); $j++)
             {
