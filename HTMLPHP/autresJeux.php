@@ -52,7 +52,7 @@ $file_handle = fopen("../DONNEES/F".$i.".txt", "r");
 $line_of_text = fgets($file_handle);
 $gamedetail = explode("#", $line_of_text);
 
-if($gamedetail[7]=="unknow")
+if($gamedetail[7]=="unknow" && $gamedetail[5]==1)
 {
     for($j=0; $j<(count($gamedetail)-3); $j++)
     {

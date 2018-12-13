@@ -58,7 +58,7 @@ function nb_element($repertoire)
 <?php
 
 $id = nb_element($repertoire);
-$destination = "C:/wamp64/www/RetroGaming/IMAGES/".$id.".jpg";
+$destination = "../IMAGES/".$id.".jpg";
 
 if(isset($_POST['sub1']))
 {
